@@ -1,36 +1,48 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>IMDB | HOME</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>IMDB</h1>
-        <nav>
-            <ul >
-                <li><a href="">Home</a></li>
-                <li class ="dropdown">
-                    <a class="dropbtn" href="">Movies</a>
-                    <div class="dropdown-content">
-                        <a href="#coming-soon">Coming Soon</a>
-                        <a href="#action">Action</a>
-                        <a href="#comedy">Comedy</a>
-                        <a href="#horror">Horror</a>
-                    </div>
-                </li>
-                <li><a href="">Watchlist</a></li>
-                <li><a href="">Sign In</a></li>
-                
-             
-            </ul>
-        </nav>
+      <h1>IMDB</h1>
+      <form id = "search-form" >
+        <input type="text" placeholder="Search.." name="search">
+        <input type="submit" value="🔍"></input>
+      </form>
+      <nav>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li class="dropdown">
+            <a class="dropbtn" href="">Movies</a>
+            <div class="dropdown-content">
+              <a href="#coming-soon">Coming Soon</a>
+              <a href="#action">Action</a>
+              <a href="#comedy">Comedy</a>
+              <a href="#horror">Horror</a>
+            </div>
+          </li>
+          <li><a href="">Watchlist</a></li>
+          <li><a href="">Sign In</a></li>
+        </ul>
+      </nav>
     </header>
-    <section id = "coming-soon">
-        <div class = "title"><p>Coming Soon</p></div>
-        <div class= trailers>
+    <div class="search-result hidden" id ="adventure" >
+        <button class= "cross"><a>x</a></button>
+        <h1>Result for searched </h1>
+        <div class = "movies_cards" >
+        </div>
+        
+    </div>
+
+    <div class="home-page">
+      <section id="coming-soon">
+        <div class="title"><p>Coming Soon</p></div>
+        <div class="trailers">
             <iframe width="642" height="361" src="https://www.youtube.com/embed/NLOp_6uPccQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <iframe width="642" height="361" src="https://www.youtube.com/embed/-FmWuCgJmxo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <iframe width="642" height="361" src="https://www.youtube.com/embed/rt-2cxAiPJk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -39,368 +51,44 @@
             <iframe width="642" height="361" src="https://www.youtube.com/embed/w9i-bg0md74" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <iframe width="642" height="361" src="https://www.youtube.com/embed/ahZFCF--uRY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-    </section>
-    <section id="action">
-        <div class ="movies_cards">
-            <div class="movies_card">
-                <img src="https://m.media-amazon.com/images/M/MV5BOTY2NzFjODctOWUzMC00MGZhLTlhNjMtM2Y2ODBiNGY1ZWRiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg" alt="">
-                <div class =  "info">
-                <p class="title">Free Guy</p>
-                <p class="year">2021</p>
-                <p class="time">115 mins</p>
-                </div>
-                <button> <span>+</span>Watchlist</button>
-            </div>
-            <div class="movies_card">
-                <img src="https://m.media-amazon.com/images/M/MV5BOTY2NzFjODctOWUzMC00MGZhLTlhNjMtM2Y2ODBiNGY1ZWRiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg" alt="">
-                <div class =  "info">
-                <p class="title">Free Guy</p>
-                <p class="year">2021</p>
-                <p class="time">115 mins</p>
-                </div>
-                <button> <span>+</span>Watchlist</button>
-            </div>
-            <div class="movies_card">
-                <img src="https://m.media-amazon.com/images/M/MV5BOTY2NzFjODctOWUzMC00MGZhLTlhNjMtM2Y2ODBiNGY1ZWRiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg" alt="">
-                <div class =  "info">
-                <p class="title">Free Guy</p>
-                <p class="year">2021</p>
-                <p class="time">115 mins</p>
-                </div>
-                <button> <span>+</span>Watchlist</button>
-            </div>
-            <div class="movies_card">
-                <img src="https://m.media-amazon.com/images/M/MV5BOTY2NzFjODctOWUzMC00MGZhLTlhNjMtM2Y2ODBiNGY1ZWRiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg" alt="">
-                <div class =  "info">
-                <p class="title">Free Guy</p>
-                <p class="year">2021</p>
-                <p class="time">115 mins</p>
-                </div>
-                <button> <span>+</span>Watchlist</button>
-            </div>
-            <div class="movies_card">
-                <img src="https://m.media-amazon.com/images/M/MV5BOTY2NzFjODctOWUzMC00MGZhLTlhNjMtM2Y2ODBiNGY1ZWRiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg" alt="">
-                <div class =  "info">
-                <p class="title">Free Guy</p>
-                <p class="year">2021</p>
-                <p class="time">115 mins</p>
-                </div>
-                <button> <span>+</span>Watchlist</button>
-            </div>
-            <div class="movies_card">
-                <img src="https://m.media-amazon.com/images/M/MV5BOTY2NzFjODctOWUzMC00MGZhLTlhNjMtM2Y2ODBiNGY1ZWRiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg" alt="">
-                <div class =  "info">
-                <p class="title">Free Guy</p>
-                <p class="year">2021</p>
-                <p class="time">115 mins</p>
-                </div>
-                <button> <span>+</span>Watchlist</button>
-            </div>
-            <div class="movies_card">
-                <img src="https://m.media-amazon.com/images/M/MV5BOTY2NzFjODctOWUzMC00MGZhLTlhNjMtM2Y2ODBiNGY1ZWRiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg" alt="">
-                <div class =  "info">
-                <p class="title">Free Guy</p>
-                <p class="year">2021</p>
-                <p class="time">115 mins</p>
-                </div>
-                <button> <span>+</span>Watchlist</button>
-            </div>
-            <div class="movies_card">
-                <img src="https://m.media-amazon.com/images/M/MV5BOTY2NzFjODctOWUzMC00MGZhLTlhNjMtM2Y2ODBiNGY1ZWRiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg" alt="">
-                <div class =  "info">
-                <p class="title">Free Guy</p>
-                <p class="year">2021</p>
-                <p class="time">115 mins</p>
-                </div>
-                <button> <span>+</span>Watchlist</button>
-            </div>
-            <div class="movies_card">
-                <img src="https://m.media-amazon.com/images/M/MV5BOTY2NzFjODctOWUzMC00MGZhLTlhNjMtM2Y2ODBiNGY1ZWRiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg" alt="">
-                <div class =  "info">
-                <p class="title">Free Guy</p>
-                <p class="year">2021</p>
-                <p class="time">115 mins</p>
-                </div>
-                <button> <span>+</span>Watchlist</button>
-            </div>
-            <div class="movies_card">
-                <img src="https://m.media-amazon.com/images/M/MV5BOTY2NzFjODctOWUzMC00MGZhLTlhNjMtM2Y2ODBiNGY1ZWRiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg" alt="">
-                <div class =  "info">
-                <p class="title">Free Guy</p>
-                <p class="year">2021</p>
-                <p class="time">115 mins</p>
-                </div>
-                <button> <span>+</span>Watchlist</button>
-            </div>
-            <div class="movies_card">
-                <img src="https://m.media-amazon.com/images/M/MV5BOTY2NzFjODctOWUzMC00MGZhLTlhNjMtM2Y2ODBiNGY1ZWRiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg" alt="">
-                <div class =  "info">
-                <p class="title">Free Guy</p>
-                <p class="year">2021</p>
-                <p class="time">115 mins</p>
-                </div>
-                <button> <span>+</span>Watchlist</button>
-            </div>
-            <div class="movies_card">
-                <img src="https://m.media-amazon.com/images/M/MV5BOTY2NzFjODctOWUzMC00MGZhLTlhNjMtM2Y2ODBiNGY1ZWRiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg" alt="">
-                <div class =  "info">
-                <p class="title">Free Guy</p>
-                <p class="year">2021</p>
-                <p class="time">115 mins</p>
-                </div>
-                <button> <span>+</span>Watchlist</button>
-            </div>
+      </section>
+      <section id="action">
+        <div class="movies_cards">
         </div>
         <div class="wall">
-            <h3>ACTION</h3>
+          <h3>ACTION</h3>
         </div>
-    </section>
-    <section id="comedy">
+      </section>
+      <section id="comedy">
         <div class="wall">
-            <h3>COMEDY</h3>
+          <h3>COMEDY</h3>
         </div>
-        <div class ="movies_cards">
-            <div class="movies_card">
-                <img src="https://m.media-amazon.com/images/M/MV5BOTY2NzFjODctOWUzMC00MGZhLTlhNjMtM2Y2ODBiNGY1ZWRiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg" alt="">
-                <div class =  "info">
-                <p class="title">Free Guy</p>
-                <p class="year">2021</p>
-                <p class="time">115 mins</p>
-                </div>
-                <button> <span>+</span>Watchlist</button>
-            </div>
-            <div class="movies_card">
-                <img src="https://m.media-amazon.com/images/M/MV5BOTY2NzFjODctOWUzMC00MGZhLTlhNjMtM2Y2ODBiNGY1ZWRiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg" alt="">
-                <div class =  "info">
-                <p class="title">Free Guy</p>
-                <p class="year">2021</p>
-                <p class="time">115 mins</p>
-                </div>
-                <button> <span>+</span>Watchlist</button>
-            </div>
-            <div class="movies_card">
-                <img src="https://m.media-amazon.com/images/M/MV5BOTY2NzFjODctOWUzMC00MGZhLTlhNjMtM2Y2ODBiNGY1ZWRiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg" alt="">
-                <div class =  "info">
-                <p class="title">Free Guy</p>
-                <p class="year">2021</p>
-                <p class="time">115 mins</p>
-                </div>
-                <button> <span>+</span>Watchlist</button>
-            </div>
-            <div class="movies_card">
-                <img src="https://m.media-amazon.com/images/M/MV5BOTY2NzFjODctOWUzMC00MGZhLTlhNjMtM2Y2ODBiNGY1ZWRiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg" alt="">
-                <div class =  "info">
-                <p class="title">Free Guy</p>
-                <p class="year">2021</p>
-                <p class="time">115 mins</p>
-                </div>
-                <button> <span>+</span>Watchlist</button>
-            </div>
-            <div class="movies_card">
-                <img src="https://m.media-amazon.com/images/M/MV5BOTY2NzFjODctOWUzMC00MGZhLTlhNjMtM2Y2ODBiNGY1ZWRiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg" alt="">
-                <div class =  "info">
-                <p class="title">Free Guy</p>
-                <p class="year">2021</p>
-                <p class="time">115 mins</p>
-                </div>
-                <button> <span>+</span>Watchlist</button>
-            </div>
-            <div class="movies_card">
-                <img src="https://m.media-amazon.com/images/M/MV5BOTY2NzFjODctOWUzMC00MGZhLTlhNjMtM2Y2ODBiNGY1ZWRiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg" alt="">
-                <div class =  "info">
-                <p class="title">Free Guy</p>
-                <p class="year">2021</p>
-                <p class="time">115 mins</p>
-                </div>
-                <button> <span>+</span>Watchlist</button>
-            </div>
-            <div class="movies_card">
-                <img src="https://m.media-amazon.com/images/M/MV5BOTY2NzFjODctOWUzMC00MGZhLTlhNjMtM2Y2ODBiNGY1ZWRiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg" alt="">
-                <div class =  "info">
-                <p class="title">Free Guy</p>
-                <p class="year">2021</p>
-                <p class="time">115 mins</p>
-                </div>
-                <button> <span>+</span>Watchlist</button>
-            </div>
-            <div class="movies_card">
-                <img src="https://m.media-amazon.com/images/M/MV5BOTY2NzFjODctOWUzMC00MGZhLTlhNjMtM2Y2ODBiNGY1ZWRiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg" alt="">
-                <div class =  "info">
-                <p class="title">Free Guy</p>
-                <p class="year">2021</p>
-                <p class="time">115 mins</p>
-                </div>
-                <button> <span>+</span>Watchlist</button>
-            </div>
-            <div class="movies_card">
-                <img src="https://m.media-amazon.com/images/M/MV5BOTY2NzFjODctOWUzMC00MGZhLTlhNjMtM2Y2ODBiNGY1ZWRiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg" alt="">
-                <div class =  "info">
-                <p class="title">Free Guy</p>
-                <p class="year">2021</p>
-                <p class="time">115 mins</p>
-                </div>
-                <button> <span>+</span>Watchlist</button>
-            </div>
-            <div class="movies_card">
-                <img src="https://m.media-amazon.com/images/M/MV5BOTY2NzFjODctOWUzMC00MGZhLTlhNjMtM2Y2ODBiNGY1ZWRiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg" alt="">
-                <div class =  "info">
-                <p class="title">Free Guy</p>
-                <p class="year">2021</p>
-                <p class="time">115 mins</p>
-                </div>
-                <button> <span>+</span>Watchlist</button>
-            </div>
-            <div class="movies_card">
-                <img src="https://m.media-amazon.com/images/M/MV5BOTY2NzFjODctOWUzMC00MGZhLTlhNjMtM2Y2ODBiNGY1ZWRiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg" alt="">
-                <div class =  "info">
-                <p class="title">Free Guy</p>
-                <p class="year">2021</p>
-                <p class="time">115 mins</p>
-                </div>
-                <button> <span>+</span>Watchlist</button>
-            </div>
-            <div class="movies_card">
-                <img src="https://m.media-amazon.com/images/M/MV5BOTY2NzFjODctOWUzMC00MGZhLTlhNjMtM2Y2ODBiNGY1ZWRiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg" alt="">
-                <div class =  "info">
-                <p class="title">Free Guy</p>
-                <p class="year">2021</p>
-                <p class="time">115 mins</p>
-                </div>
-                <button> <span>+</span>Watchlist</button>
-            </div>
-        </div>
-    </section>
-    <section id="horror">
-        <div class ="movies_cards">
-            <div class="movies_card">
-                <img src="https://m.media-amazon.com/images/M/MV5BOTY2NzFjODctOWUzMC00MGZhLTlhNjMtM2Y2ODBiNGY1ZWRiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg" alt="">
-                <div class =  "info">
-                <p class="title">Free Guy</p>
-                <p class="year">2021</p>
-                <p class="time">115 mins</p>
-                </div>
-                <button> <span>+</span>Watchlist</button>
-            </div>
-            <div class="movies_card">
-                <img src="https://m.media-amazon.com/images/M/MV5BOTY2NzFjODctOWUzMC00MGZhLTlhNjMtM2Y2ODBiNGY1ZWRiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg" alt="">
-                <div class =  "info">
-                <p class="title">Free Guy</p>
-                <p class="year">2021</p>
-                <p class="time">115 mins</p>
-                </div>
-                <button> <span>+</span>Watchlist</button>
-            </div>
-            <div class="movies_card">
-                <img src="https://m.media-amazon.com/images/M/MV5BOTY2NzFjODctOWUzMC00MGZhLTlhNjMtM2Y2ODBiNGY1ZWRiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg" alt="">
-                <div class =  "info">
-                <p class="title">Free Guy</p>
-                <p class="year">2021</p>
-                <p class="time">115 mins</p>
-                </div>
-                <button> <span>+</span>Watchlist</button>
-            </div>
-            <div class="movies_card">
-                <img src="https://m.media-amazon.com/images/M/MV5BOTY2NzFjODctOWUzMC00MGZhLTlhNjMtM2Y2ODBiNGY1ZWRiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg" alt="">
-                <div class =  "info">
-                <p class="title">Free Guy</p>
-                <p class="year">2021</p>
-                <p class="time">115 mins</p>
-                </div>
-                <button> <span>+</span>Watchlist</button>
-            </div>
-            <div class="movies_card">
-                <img src="https://m.media-amazon.com/images/M/MV5BOTY2NzFjODctOWUzMC00MGZhLTlhNjMtM2Y2ODBiNGY1ZWRiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg" alt="">
-                <div class =  "info">
-                <p class="title">Free Guy</p>
-                <p class="year">2021</p>
-                <p class="time">115 mins</p>
-                </div>
-                <button> <span>+</span>Watchlist</button>
-            </div>
-            <div class="movies_card">
-                <img src="https://m.media-amazon.com/images/M/MV5BOTY2NzFjODctOWUzMC00MGZhLTlhNjMtM2Y2ODBiNGY1ZWRiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg" alt="">
-                <div class =  "info">
-                <p class="title">Free Guy</p>
-                <p class="year">2021</p>
-                <p class="time">115 mins</p>
-                </div>
-                <button> <span>+</span>Watchlist</button>
-            </div>
-            <div class="movies_card">
-                <img src="https://m.media-amazon.com/images/M/MV5BOTY2NzFjODctOWUzMC00MGZhLTlhNjMtM2Y2ODBiNGY1ZWRiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg" alt="">
-                <div class =  "info">
-                <p class="title">Free Guy</p>
-                <p class="year">2021</p>
-                <p class="time">115 mins</p>
-                </div>
-                <button> <span>+</span>Watchlist</button>
-            </div>
-            <div class="movies_card">
-                <img src="https://m.media-amazon.com/images/M/MV5BOTY2NzFjODctOWUzMC00MGZhLTlhNjMtM2Y2ODBiNGY1ZWRiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg" alt="">
-                <div class =  "info">
-                <p class="title">Free Guy</p>
-                <p class="year">2021</p>
-                <p class="time">115 mins</p>
-                </div>
-                <button> <span>+</span>Watchlist</button>
-            </div>
-            <div class="movies_card">
-                <img src="https://m.media-amazon.com/images/M/MV5BOTY2NzFjODctOWUzMC00MGZhLTlhNjMtM2Y2ODBiNGY1ZWRiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg" alt="">
-                <div class =  "info">
-                <p class="title">Free Guy</p>
-                <p class="year">2021</p>
-                <p class="time">115 mins</p>
-                </div>
-                <button> <span>+</span>Watchlist</button>
-            </div>
-            <div class="movies_card">
-                <img src="https://m.media-amazon.com/images/M/MV5BOTY2NzFjODctOWUzMC00MGZhLTlhNjMtM2Y2ODBiNGY1ZWRiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg" alt="">
-                <div class =  "info">
-                <p class="title">Free Guy</p>
-                <p class="year">2021</p>
-                <p class="time">115 mins</p>
-                </div>
-                <button> <span>+</span>Watchlist</button>
-            </div>
-            <div class="movies_card">
-                <img src="https://m.media-amazon.com/images/M/MV5BOTY2NzFjODctOWUzMC00MGZhLTlhNjMtM2Y2ODBiNGY1ZWRiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg" alt="">
-                <div class =  "info">
-                <p class="title">Free Guy</p>
-                <p class="year">2021</p>
-                <p class="time">115 mins</p>
-                </div>
-                <button> <span>+</span>Watchlist</button>
-            </div>
-            <div class="movies_card">
-                <img src="https://m.media-amazon.com/images/M/MV5BOTY2NzFjODctOWUzMC00MGZhLTlhNjMtM2Y2ODBiNGY1ZWRiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg" alt="">
-                <div class =  "info">
-                <p class="title">Free Guy</p>
-                <p class="year">2021</p>
-                <p class="time">115 mins</p>
-                </div>
-                <button> <span>+</span>Watchlist</button>
-            </div>
-        </div>
+        <div class="movies_cards"></div>
+      </section>
+      <section id="horror">
+        <div class="movies_cards"></div>
         <div class="wall">
-            <h3>HORROR</h3>
+          <h3>HORROR</h3>
         </div>
-    </section>
+      </section>
+    </div>
+
+    <div id="movie-info"></div>
 
     <footer>
-        <div class="social">
-            <img src="/facebook.jpg" alt="">
-            <img src="/instagram.jpg" alt="">
-            <img src="/twitter.jpg" alt="">
-            <img src="/email.jpg" alt="">
-        </div>
-        <ul>
-            <li>Contact Us</li>
-            <li>About Us</li>
-            <li>See More Projects</li>
-        </ul>
+      <div class="social">
+        <a href = "https://www.facebook.com/profile.php?id=100010673176205" target="_blank"><img src="/facebook.jpg" alt="" /></a>
+        <a href = "https://www.instagram.com/int_rohit/" target="_blank"><img src="/instagram.jpg" alt="" /></a>
+        <a href = "https://twitter.com/RohitSh54069078" target="_blank"><img src="/twitter.jpg" alt="" /></a>
+        <a href = "https://www.linkedin.com/in/rohit-sharma-87140a208/" target="_blank"><img src="/linkedin.png" alt="" /></a>
+      </div>
+      <ul>
+        <li>Contact Us</li>
+        <li>About Us</li>
+        <li>See More Projects</li>
+      </ul>
     </footer>
 
-
-    <script src ="/script.js"></script>
-</body>
+    <script src="/script.js"></script>
+  </body>
 </html>

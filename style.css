@@ -43,6 +43,20 @@ header h1 {
   /* position: absolute; */
 }
 
+header form{
+  display: inline-block;
+  width: 15rem;
+  /* border:1px solid white; */
+  margin-left: 25% ;
+  margin-top: 10px;
+}
+
+header form input[type = text],header form input[type = submit] {
+  border: none;
+  padding: 3px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+}
 header nav {
   margin: 1.2rem;
   margin-right: 0.1rem;
@@ -109,9 +123,70 @@ header nav ul .dropdown:hover .dropdown-content, .dropdown-content:hover {
 
 
 
-section {
+/* //////////////// HOMEPAGE /////////////////// */
+/* .home-page{
+  display: none;
+} */
+
+.search-result{
   height: 40rem;
+  width: 95%;
   /* border: 1px solid rgb(255, 255, 255); */
+  margin-left:2%;
+  display: flex;
+  flex-direction:column;
+  /* align-items: center; */
+  padding-top:5rem;
+  color: cornsilk;
+  
+}
+
+.search-result .cross{
+  /* float:right; */
+  text-align: center;
+  /* margin:3px; */
+  border-radius: 30px;
+  height: 40px;
+  background-color: rgb(255, 255, 255);
+  width: 40px;
+  cursor: pointer;
+
+}
+
+.search-result a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+  float:right;
+  text-align: center;
+  /* margin:3px; */
+  border-radius: 30px;
+  height: 40px;
+  background-color: rgb(255, 255, 255);
+  width: 40px;
+  cursor: pointer;
+}
+
+.search-result h1{
+  display: block;
+  width:100%;
+  height: 3rem;
+  /* background-color: crimson; */
+}
+
+.search-result .movies_cards{
+  /* background-color: crimson; */
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+}
+
+section {
+  
+  height: 40rem;
+  width: 95%;
+  /* border: 1px solid rgb(255, 255, 255); */
+  margin-left:2%;
   display: flex;
   flex-direction: row;
   /* align-items: center; */
@@ -178,9 +253,22 @@ section .movies_cards {
     border-radius: 7px;
     margin: 1rem;
     background-color: rgb(45, 46, 49);
+    cursor: pointer;
 
     /* transform: translateX(-50%); */
+    /* z-index: 0; */
 }
+
+.movies_card .plot{
+  display: none;
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  width: 10rem;
+  height: 10rem;
+  left: 8rem;
+  z-index :12
+}
+
 
 
 .movies_card:hover{
@@ -188,6 +276,9 @@ section .movies_cards {
     transition-property: transform;
     transition-duration: 0.3s;
 }
+/* .movies_card:hover .plot{
+  display: block;
+} */
 
 .movies_card img{
 
@@ -228,7 +319,9 @@ section .movies_cards {
     margin: 0.8rem;
     color:rgb(202, 202, 202) ;
     background-color: transparent;
+    /* z-index: 0; */
 }
+
 .movies_card button:hover{
     transform: scale(1.01);
     transition-property: transform;
@@ -276,7 +369,127 @@ section .wall h3 {
   /* border:2px solid rgb(105, 91, 91); */
   z-index : -1;
 }
+/* ///////////////////MOIVES DETAILS////////////////////// */
 
+#movie-info{
+  width: 95%;
+  /* border:1px solid white; */
+  margin-left:2%;
+  background-color:rgb(29, 29, 29);
+  color: white;
+}
+
+#movie-info .back{
+  background-color: white;
+  padding: 0px 3px;
+
+  /* height: 20px; */
+  margin: 5px;
+  font-size: 2rem;
+  /* color: #c9ccd5; */
+  font-weight: bold;
+  cursor: pointer;
+}
+#movie-info .title{
+  font-family:var(--roboto);
+  color:cornsilk;
+  font-size: 3rem;
+  margin: 1rem 2rem;
+}
+.hidden{
+  display: none;
+}
+
+#movie-info img{
+  width:20rem;
+  position: relative;
+  margin-top: 1rem;
+  left:38%;
+}
+
+#movie-info .info-part {
+  display: flex;
+  flex-direction: row;
+
+}
+#movie-info .info-part .movie-desc{
+  width:60%;
+  /* border: 1px solid white; */
+}
+
+#movie-info .genre{
+  color: white;
+  color: white;
+  font-family: serif;
+  margin:1rem;
+  border: 1px solid white;
+  width: 5rem;
+  text-align: center;
+  padding: 2px;
+  border-radius: 15px;
+  font-size:1rem;
+}
+
+#movie-info .plot{
+  color: white;
+  font-family: serif;
+  margin:1rem;
+  font-size:1.1rem;
+}
+
+#movie-info .year{
+  color: white;
+  font-family: serif;
+  margin: .5rem 1rem;
+  font-size:1rem;
+}
+
+.yellow{
+  color:rgb(201, 201, 57)
+}
+
+#movie-info .desc-btn{
+  width:20%;
+}
+
+#movie-info .desc-btn button{
+  width:20rem;
+  font-size: 1.15rem;
+  background-color: transparent;
+  color:cornsilk;
+  padding: .3rem;
+  margin-left: 6rem;
+  margin-top: 2rem;
+  border: 2px double cornsilk;
+  border-radius: 7px;
+}
+#movie-info .desc-btn button a{
+ display: inline-block;
+ width: 90%;
+
+  text-decoration: none;
+  color:cornsilk;
+  /* background-color: blanchedalmond; */
+}
+
+#movie-info .desc-btn button a:hover{
+  color:black;
+  
+}
+
+#movie-info .desc-btn button:hover {
+  background-color: aliceblue;
+  box-shadow: antiquewhite;
+  cursor: pointer;
+  color: #000000;
+}
+
+#movie-info .desc-btn button:hover a{
+  color:black
+}
+
+
+/* //////////////////////FOOTER /////////////////////////// */
 footer{
   width: 100%;
   height:4rem;
@@ -284,13 +497,17 @@ footer{
 
 footer .social{
   width: 50%;
-  margin-left: 30%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  /* border: 1px solid white; */
+  display: flex;
+  justify-content: space-around;
 }
 
 footer .social img{
   width: 40px;
   height: 40px;
-  margin: 3rem;
+  margin: 2rem;
   border-radius: 10px;
 }
 
@@ -318,5 +535,4 @@ footer ul li:hover{
   cursor: pointer;
   color:white;
 }
-
 
