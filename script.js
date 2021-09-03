@@ -105,6 +105,10 @@ const searchInput = document.querySelector("header form input[type = 'text']");
 const submit = document.querySelector("header form input[type = 'submit'] ");
 const form = document.forms["search-form"];
 
+
+
+
+
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
